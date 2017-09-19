@@ -1,0 +1,48 @@
+<div ng-controller="meucadastroController">
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label">Nome</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" ng-model="usuarioAlterar.nome"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label">Sobrenome</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" ng-model="usuarioAlterar.sobrenome" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label">Email</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" ng-model="usuarioAlterar.email"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label">Senha</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                <input type="password" class="form-control" ng-model="usuarioAlterar.senha"/>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="salvarUsuarioAlterado(usuarioAlterar)"> Salvar alterações</button>
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('button')"> Cancelar</button>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<br>
+<div class="container" ng-controller="listaPedidosController">
+    <div class="row" >
+        <div ng-repeat="pedido in listaPedidos" class="col-xs-18 col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img width="380" src="webapp/resources/static/img/imac.jpg">
+                <div class="caption">
+                    <h4>{{pedido.produto.nome}}</h4>
+
+                    <p>
+                        {{pedido.produto.descricao}}
+                    </p>
+
+                    <p>
+                        <b>{{pedido.produto.preco}}</b>
+                    </p>
+                    
+                    
+                    <a ng-click="editarPedido(pedido)" class="btn btn-primary btn-xs" >Detalhes</a> 
+                    <a ng-click="deletarPedido(pedido)" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModalLong">Deletar</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="listaPedidosController" class="alert alert-warning" role="alert" ng-show="naoTemPedidos">
+    <h5><i>Você ainda não efetou nenhum pedido. Vá até a página de produtos e divirta-se!</i></h5>
+</div>
+<!------- Modal para exclusão de pedido ------->
+<div  class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content" ng-controller="listaPedidosController">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Exclusão</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>Deseja realmente excluir esse pedido?</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
+                <button ng-click="excluirPedidoSelectionado()" type="button" class="btn btn-secondary">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>  
+<a href="#/produtos" class="btn btn-success btn-xs col-md-offset-1" role="button">Ir para produtos  </a>
+<a href="#/home" class="btn btn-primary btn-xs" role="button">Home</a>

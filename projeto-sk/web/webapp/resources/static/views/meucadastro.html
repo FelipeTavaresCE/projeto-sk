@@ -1,0 +1,46 @@
+<br>
+<div class="container" ng-controller="meucadastroController">
+    <div class="row">
+        <div class="col-xs-18 col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img width="380" src="webapp/resources/static/img/usuario.png">
+                <div class="caption">
+                    <h4>Meus dados</h4>
+                    <p> <b> Nome </b> {{usuario.nome}}</p>
+                    <p> <b> Sobrenome: </b>{{usuario.sobrenome}}</p>
+                    <p> <b> Email: </b> {{usuario.email}}</p>
+                    <p> <b> Senha: </b>{{usuario.senha}}</p>
+                    
+                    <a ng-click="editarUsuario(usuario)" class="btn btn-primary btn-xs">Editar</a> 
+                    <a ng-click="deletarUsuario(usuario)" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModalLong">Excluir</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#/home" class="btn btn-primary btn-xs col-md-offset-1" role="button">Home</a>
+
+<!------- Modal para exclusão de usuário ------->
+<div  class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content" ng-controller="meucadastroController">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Exclusão</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>Deseja realmente excluir sua cotna?</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
+                <button ng-click="excluirUsuarioSelectionado()" type="button" class="btn btn-secondary">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>  
+

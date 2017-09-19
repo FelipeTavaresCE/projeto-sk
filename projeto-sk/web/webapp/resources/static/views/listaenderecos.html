@@ -1,0 +1,52 @@
+
+<div class="container" ng-controller="listaEnderecosController" ng-hide="mostrarMensagem">
+
+    <div class="row" >
+        <br> <br>
+        <div ng-repeat='item in listaEnderecos' class="col-xs-10 col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>Endereço</h4>
+                    <p> <b> Logradouro: </b> {{item.logradouro}}</p>
+                    <p> <b> Número: </b>{{item.numero}}</p>
+                    <p> <b> Complemento: </b> {{item.complemento}}</p>
+                    <p> <b> CEP: </b>{{item.cep}}</p>
+                    <p> <b> Bairro: </b> {{item.bairro}}</p>
+                    <p> <b> Cidade: </b>{{item.cidade}}</p>
+                    <p> <b> Estado: </b>{{item.estado}}</p>
+                    <br>
+                    <a ng-click="editarEndereco(item)" class="btn btn-primary btn-xs" >Editar</a> 
+                    <a ng-click="deletarEndereco(item)" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModalLong">Excluir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="listaEnderecosController" ng-show="naoTemEndereco">
+    <h5>Você ainda não tem nenhum endereço cadastrado.</h5>
+</div>
+
+<a href="#/home" class="btn btn-primary btn-xs col-md-offset-1" role="button">Home</a>
+<!------- Modal para exclusão de endereço ------->
+<div  class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content" ng-controller="listaEnderecosController">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Exclusão</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>Deseja realmente excluir esse endereço?</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
+                <button ng-click="excluirEnderecoSelectionado()" data-dismiss="modal" href="#/home" type="button" class="btn btn-secondary">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>  

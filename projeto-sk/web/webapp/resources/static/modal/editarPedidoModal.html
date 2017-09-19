@@ -1,0 +1,25 @@
+<div ng-controller="listaPedidosController">
+
+    <div class="thumbnail">
+        <img width="380" src="webapp/resources/static/img/imac.jpg">
+        <div class="caption">
+            <h4>{{pedidoAlterar.produto.nome}}</h4>
+            <p> {{pedidoAlterar.produto.descricao}}</p>
+            <p> <b>{{pedidoAlterar.produto.preco}}</b> </p>
+          
+            <div ng-hide="opcoesDeEndereco">
+                <div class="radio" ng-repeat="endereco in usuario.endereco">
+                    <label><input type="radio" ng-click="setIdEndereco(endereco.idEndereco)" name="optradio">{{endereco.logradouro}}, {{endereco.numero}}</label>
+                </div>
+            </div>
+            
+            <a ng-click="habilitarOpcoesDeEndereco()" class="btn btn-primary btn-xs" >Selecionar endereço para este pedido</a> 
+
+        </div>
+    </div>
+
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="salvarPedidoAlterado(pedidoAlterar)"> Salvar alterações</button>
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('button')"> Cancelar</button>
+    </div>
+</div>

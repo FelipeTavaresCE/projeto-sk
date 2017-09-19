@@ -1,0 +1,77 @@
+<div class="container" ng-controller="enderecoController">
+    <div class="row main">
+        <div class="main-login main-center">
+            <div class="form-group">
+                <label class="cols-sm-2 control-label">Logradouro</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" ng-model="endereco.logradouro" placeholder="Ex: Rua, Avenida etc"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="cols-sm-2 control-label">Número</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" ng-model="endereco.numero"  placeholder="Digite o número"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="cols-sm-2 control-label">Complemento</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" ng-model="endereco.complemento"  placeholder="Digite o complemento"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="cols-sm-2 control-label">CEP</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" ng-model="endereco.cep"  placeholder="Ex: 08560-250"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="cols-sm-2 control-label">Bairro</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" ng-model="endereco.bairro" placeholder="Bairro"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="cols-sm-2 control-label">Cidade</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" ng-model="endereco.cidade" placeholder="Cidade"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="cols-sm-2 control-label">Estado</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" ng-model="endereco.estado" placeholder="Estado"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <a ng-click="salvarEndereco()" id="botaoCadastrar" class="btn btn-primary">Cadastrar</a>
+                <a href="#/home" id="botaoLogin" class="btn btn-success">Home</a>
+            </div>
+        </div>
+    </div>
+</div>

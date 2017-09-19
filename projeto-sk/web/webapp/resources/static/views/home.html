@@ -1,0 +1,65 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Projeto</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#/home">Home</a></li>
+            <li><a href="#/pedidos">Pedidos</a></li>
+            <li><a href="#/produtos">Produtos</a></li>
+            <li ><a href="#/login">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-18 col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img width="280" src="webapp/resources/static/img/produtos.jpg">
+                <div class="caption">
+                    <h4>Produtos</h4>
+                    <p>Veja produtos cadastrados</p>
+                    <a href="#/produtos" class="btn btn-info btn-xs" role="button">Ver produtos</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img width="280" src="webapp/resources/static/img/pedidos.jpg">
+                <div class="caption">
+                    <h4>Meus pedidos</h4>
+                    <p>Ver pedidos</p>
+                    <a href="#/pedidos" class="btn btn-info btn-xs" role="button">Ver pedidos</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3" ng-controller="enderecoController">
+            <div class="thumbnail">
+                <img width="250" src="webapp/resources/static/img/endereco.jpg">
+                <div class="caption">
+                    <h4>Endereços para entrega</h4>
+                    <p>Editar informações</p>
+                    <a href="#/enderecocadastro" class="btn btn-info btn-xs" role="button">Cadastro</a> 
+                    <a href="#/listaenderecos?usuario={{idUsuarioLogado}}" class="btn btn-default btn-xs" role="button">Ver endereços</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img width="250" src="webapp/resources/static/img/usuario.png">
+                <div class="caption">
+                    <h4>Meu cadastro</h4>
+                    <p>Editar informações</p>
+                    <a href="#/meucadastro" class="btn btn-info btn-xs" role="button">Ver informações</a> 
+                    <a href="#" class="btn btn-default btn-xs" role="button">Editar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

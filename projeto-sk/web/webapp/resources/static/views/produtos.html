@@ -1,0 +1,29 @@
+<br>
+<div class="container" ng-controller="produtosController">
+
+    <div  ng-show="produtoAdicionado" class="alert alert-success" role="alert"> 
+        <h4 class="text-center">Produto adicionado com sucesso! Vá até pedidos para visualizá-lo :)</h4>
+    </div>
+
+    <div class="row">
+        <div ng-repeat="produto in produtos" class="col-xs-18 col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img width="380" src="webapp/resources/static/img/imac.jpg">
+                <div class="caption">
+                    <h4>{{produto.nome}}</h4>
+
+                    <p>
+                        {{produto.descricao}}
+                    </p>
+
+                    <p><b>{{produto.preco}}</b></p>
+
+                    <a ng-click="adicionarPedido(produto)" class="btn btn-info btn-xs" role="button">Adicionar</a> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#/pedidos" class="btn btn-success btn-xs col-md-offset-1" role="button">Ir para pedidos  </a>
+<a href="#/home" class="btn btn-primary btn-xs" role="button">Home</a>
